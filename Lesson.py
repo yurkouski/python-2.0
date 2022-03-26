@@ -18,6 +18,14 @@ minutes = (time - hours * 3600) // 60
 seconds = time - (hours * 3600 + minutes *60)
 print(str(hours) + ":" + str(minutes) + ":" + str(seconds) + ".")
 
+# Узнать число n
+n = int(input("Введите любое число " + name + ":"))
+print("Спасибо, что выбрали " + str(n))
+total = (n + int(str(n) + str(n)) + int(str(n) + str(n) + str(n)))
+print("Мне кажется " + str(total) + " ваше счастливое число")
+
+
+
 
 
 
