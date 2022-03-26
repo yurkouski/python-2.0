@@ -11,6 +11,12 @@ age = input("Сколько вам лет: ")
 print("Приветствую вас " + name + "!")
 print("Как здорово, что вам " + str(age) + " лет!")
 
+# Время
+time = int(input("Введите время в секундах: "))
+hours = time // 3600
+minutes = (time - hours * 3600) // 60
+seconds = time - (hours * 3600 + minutes *60)
+print(str(hours) + ":" + str(minutes) + ":" + str(seconds) + ".")
 
 
 
