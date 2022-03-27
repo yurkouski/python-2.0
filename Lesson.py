@@ -36,10 +36,15 @@ while x > 1:
 print("Максимальное число: " + str(m))
 
 # Прибыль и издержки
-profit = input(name + " Сколько вы заработали в этом месяце?:")
-costs = input("А сколько вы потеряли в этом месяце: ")
+profit = float(input(name + " Сколько вы заработали в этом месяце?:"))
+costs = float(input("А сколько вы потеряли в этом месяце: "))
 if profit > costs:
     print("Поздравляю, ваша выручка больше издержек")
+    staff = float(input ("Сколько у вас работает сотрудников?"))
+    revenue = profit - costs
+    profitability = profit / revenue
+    x = profit / staff
+    print("Рентаьелность вашей фирмы равна: " + str(profitability) + " а прибыль на одного сотрудника равна: " + str(x))
 elif profit == costs:
     print("Вы вышли по нулям")
 elif profit < costs:
