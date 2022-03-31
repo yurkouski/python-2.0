@@ -18,6 +18,16 @@ while x < a/2:
     x += 2
 print(my_list_2)
 
+#3 Времена года
+season = {'3' : "spring", '4' : "spring", '5' : "spring",
+          '6' : "summer",'7' : "summer", '8' : "summer",
+          '9' : 'autumn', '10' : "autumn", '11' : "autumn",
+          '12' : "winter", '1' : "winter", '2' : "winter"}
+
+month = input("Введите цифру месяца: ")
+z = season[month]
+print("Вы выбрали время года:" + z + "!")
+
 #4 Пользователь вводит строку
 line_1 = input("Введите предложение из нескольких строк с пробелами: ").split()
 print(line_1)
@@ -49,8 +59,8 @@ while line[0] != x:
         print("Рейтинг: " + str(line))
         for namber in range(len(line)):
             if namber == q:
-                y = line.index(namber)
+                y = line.index(q)
                 if line[y] >= q and q > line[y+1]:
-                    line.insert(y, q)
+                    line.insert(y, y+1) # Не получилось сделать перенос элемента правее(((
 print("Рейтинг: " + str(line))
 
