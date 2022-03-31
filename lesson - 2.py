@@ -37,16 +37,20 @@ line.sort(), line.reverse()
 print("Рейтинг: " + str(line))
 x = "stop"
 while line[0] != x:
-    z = line.append(input("Добавьте еще значение, если нет, напишите, stop: "))
-    if line[-1] == x:
+    line.append(input("Добавьте еще значение, если нет, напишите, stop: "))
+    z = line[-1]
+    q = z
+    if z == x:
         line.remove("stop")
         break
         print("Рейтинг: " + str(line))
-    elif line[-1] != x:
+    elif z != x:
         line.sort(), line.reverse()
         print("Рейтинг: " + str(line))
-        for y in range(len(line)):
-            if y == z:
-                line[y], line[z] = line[z], line[y]
+        for namber in range(len(line)):
+            if namber == q:
+                y = line.index(namber)
+                if line[y] >= q and q > line[y+1]:
+                    line.insert(y, q)
 print("Рейтинг: " + str(line))
 
