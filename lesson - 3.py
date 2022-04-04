@@ -42,8 +42,32 @@ def my_func(a, b, c):
 
 print(f"Результат: {my_func(int(input('Введите 1 значение: ')), int(input('Введите второе значение: ')), int(input('Введите третье значение: ')))} ")
 
-# 4 Задание возведение в степень
-def my_func(x, y):
-    z = x**y
-    return (z)
-print(f'Результат: {my_func(float(input("Введите любое положительное число: ")), int(input("Введите целое отрицательное число: ")))} ')
+# 4 Возведение в степень
+def my_func():
+    while True:
+        try:
+            x = float(input('Введите положительное число: '))
+            y = int(input('Введите отрицательное число: '))
+            z = x ** y
+            return z
+        except ValueError:
+            print("Ввели неправильное число")
+
+print(f'Результат: {my_func()} ')
+
+
+#6 Прописная первая буква
+def my_func():
+    my_list = input('Введите предложение с маленькой буквы: ')
+    my_list2 = str.capitalize(my_list)
+    return my_list2
+
+print(f'Результат: {my_func()}')
+
+#7 В каждом слове заглавная буква
+def my_func():
+    my_list = input('Введите предложение с маленькой буквы: ')
+    my_list2 = str.title(my_list)
+    return my_list2
+
+print(f'Результат: {my_func()}')
