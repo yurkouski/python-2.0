@@ -55,6 +55,26 @@ def my_func():
 
 print(f'Результат: {my_func()} ')
 
+#5 Запрос на строку чисел:
+def my_func():
+    my_list = input("Введите набор чисел разделенных пробелом: ").split()
+    thesum = 0
+    a = 'stop'
+    for i in my_list:
+        thesum = thesum + int(i)
+    print(thesum)
+    while True:
+        my_list.append(input('Введите следующее число, если нет, напишите stop: '))
+        z = my_list[-1]
+        if a == z:
+            my_list.remove("stop")
+            break
+        elif a != z:
+            thesum = thesum + int(my_list[-1])
+            print(thesum)
+    return (thesum)
+print("Результат: " + str(my_func()))
+
 
 #6 Прописная первая буква
 def my_func():
