@@ -1,5 +1,5 @@
 #1 Расчет заработной платы:
-from sys import argv
+
 def result():
     try:
         bid = int(input('Ваша ставка в часах: '))
@@ -34,6 +34,29 @@ print(f'Новый список: {my_list}')
 from functools import reduce
 my_list = [el for el in range(99, 1001) if el % 2 == 0]
 print(reduce(lambda x, y: x * y, my_list))
+
+#6 Реализовать 2 скрипта
+from itertools import count
+x = 0
+for el in count(int(input('Напишите первое число: '))):
+    if x <= 20:
+        print(el)
+        x += 1
+    else:
+        break
+
+
+from itertools import cycle
+
+z = 0
+my_list = ['один', 10, 2.25, 5, 15, 'пять']
+for el in cycle(my_list):
+    if z < 30:
+        print(el)
+        z += 1
+    else:
+        break
+
 
 #7 Функция yeld
 from math import factorial
