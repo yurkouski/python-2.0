@@ -34,3 +34,14 @@ print(f'Новый список: {my_list}')
 from functools import reduce
 my_list = [el for el in range(99, 1001) if el % 2 == 0]
 print(reduce(lambda x, y: x * y, my_list))
+
+#7 Функция yeld
+from math import factorial
+
+def fact():
+    for el in range(1, 20): # тут можно воспользоваться итератором count(), но я решил не писать, что бы не создать бесконечный список
+        yield el
+
+my_fact = [factorial(el) for el in fact()]
+
+print (my_fact)
