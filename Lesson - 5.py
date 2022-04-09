@@ -34,3 +34,15 @@ with open(r"C:\Users\Вася\Desktop\test.txt") as file:
         x = len(line.split())
         print(f'В {y} строке {x} слова')
         y +=1
+
+# 3 Оклад
+with open(r"C:\Users\Вася\Desktop\test.txt") as file:
+    few = []
+    average = []
+    for line in file:
+        f = line.split()
+        if int(f[1]) < 20000:
+            few.append(f[0])
+        average.append(f[1])
+
+    print(f'Меньше всех получают {few}, средний оклад всех сотрудников {sum(map(int, average)) / len(average)}')
