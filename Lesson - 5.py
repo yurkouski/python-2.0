@@ -67,3 +67,17 @@ with open(r"C:\Users\Вася\Desktop\test.txt") as file:
 
 with open(r"C:\Users\Вася\Desktop\test.txt", 'w') as file:
     file.writelines(my_file)
+
+#5 Посчитать сумму
+file = open('test_2.txt', 'w')
+file.write('1 2 3 4 5 6 7 8 9 11 12 13 14 15 16')
+file.close()
+
+with open(r'test_2.txt') as file:
+    f = file.read()
+    print(f)
+
+with open(r'test_2.txt') as file:
+    f = file.read()
+    f = f.split()
+    print(f'Сумма чисел равно: {sum(map(int, f))}')
