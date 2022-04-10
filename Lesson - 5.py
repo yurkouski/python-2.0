@@ -46,3 +46,24 @@ with open(r"C:\Users\Вася\Desktop\test.txt") as file:
         average.append(f[1])
 
     print(f'Меньше всех получают {few}, средний оклад всех сотрудников {sum(map(int, average)) / len(average)}')
+
+
+#4 Текстовый фаил
+with open(r"C:\Users\Вася\Desktop\test.txt") as file:
+    file = file.read()
+    print(file)
+
+with open(r"C:\Users\Вася\Desktop\test.txt") as file:
+    my_file = []
+    transcript = { 'One': 'один',
+                   'Two': 'два',
+                   'Three': 'три',
+                   'Four': 'четыре' }
+    for line in file:
+        y = line.split(' ', 1)
+        my_file.append(transcript[y[0]] + '-' + y[1])
+
+    print(my_file)
+
+with open(r"C:\Users\Вася\Desktop\test.txt", 'w') as file:
+    file.writelines(my_file)
