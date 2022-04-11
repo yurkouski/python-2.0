@@ -81,3 +81,23 @@ with open(r'test_2.txt') as file:
     f = file.read()
     f = f.split()
     print(f'Сумма чисел равно: {sum(map(int, f))}')
+
+#6 Словать из предметов
+with open(r"C:\Users\Вася\Desktop\test.txt") as file:
+    file = file.read()
+    print(file)
+
+
+with open(r"C:\Users\Вася\Desktop\test.txt") as file:
+
+    while True:
+        line = file.readline()
+        line = line.split()
+        x = list(line)
+        y = x[0]
+        if not line:
+            break
+        num_list = [int(num) for num in filter(lambda num: num.isnumeric(), line)]
+        num_list = sum(num_list)
+        my_list = {y: num_list}
+        print(my_list)
