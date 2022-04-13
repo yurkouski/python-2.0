@@ -28,3 +28,30 @@ class Road:
 
 a = Road(10, 10)
 print(a.massa())
+
+#3 Класс Worker
+
+class Worker:
+
+    def __init__(self, name, surname, position, wage, bonus):
+        print('Данные сотрудика: ')
+        self.name = name
+        self.surneme = surname
+        self.position = position
+        self._income = {'Зарплата': wage, 'Премия': bonus}
+
+class Position(Worker):
+
+    def __init__(self, name, surname, position, wage, bonus ):
+        super().__init__(name, surname, position, wage, bonus)
+
+    def get_full_name(self):
+        return (f"Полное имя: {self.name} {self.surneme} ")
+
+    def get_total_income(self):
+        return (f"Полный оклад: {sum(self._income.values())}")
+
+
+a = Position('Василий', 'Юрковский', 'хирург', 10, 10)
+
+print(a.get_total_income())
