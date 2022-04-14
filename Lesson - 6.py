@@ -84,9 +84,9 @@ class TownCar(Car):
 
     def show_speed(self):
         if self.speed > 60:
-            print(f'Машина превышает скорость')
+            return f'Машина превышает скорость'
         else:
-            print(f'Не превышает скорость')
+            return f'Не превышает скорость'
 
 class SportCar(Car):
 
@@ -100,9 +100,9 @@ class WorkCar(Car):
 
     def show_speed(self):
         if self.speed > 40:
-            print(f'Превышает скорость')
+            return f'Превышает скорость'
         else:
-            print(f'Не превышает скорость')
+           return f'Не превышает скорость'
 
 class PoliceCar(Car):
 
@@ -115,5 +115,6 @@ belaz = WorkCar(30, 'black', 'belaz', False)
 geely = PoliceCar(100, 'withe', 'geely', False)
 
 print(f'{belaz.go()}, после чего {belaz.turn_right()}')
-print(opel.show_speed())
-
+print(geely.show_speed())
+print(ferrari.is_police)
+print(f'{belaz.name} {belaz.show_speed()}')
