@@ -55,3 +55,65 @@ class Position(Worker):
 a = Position('Василий', 'Юрковский', 'хирург', 10, 10)
 
 print(a.get_total_income())
+
+#4 Класс Car
+
+class Car:
+
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return f'{self.name} поехала'
+    def stop(self):
+        return f'{self.name} остановилась'
+    def turn_right(self):
+        return f'{self.name} повернула на право'
+    def turn_left(self):
+        return f'{self.name} повернула на лево'
+    def show_speed(self):
+        return f'{self.name} едет со скоростью {self.speed} км/ч'
+
+class TownCar(Car):
+
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 60:
+            print(f'Машина превышает скорость')
+        else:
+            print(f'Не превышает скорость')
+
+class SportCar(Car):
+
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+class WorkCar(Car):
+
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 40:
+            print(f'Превышает скорость')
+        else:
+            print(f'Не превышает скорость')
+
+class PoliceCar(Car):
+
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+opel = TownCar(100, 'black', "opel", True)
+ferrari = SportCar(200, 'red', 'ferrari', True)
+belaz = WorkCar(30, 'black', 'belaz', False)
+geely = PoliceCar(100, 'withe', 'geely', False)
+
+print(f'{belaz.go()}, после чего {belaz.turn_right()}')
+print(opel.show_speed())
+
