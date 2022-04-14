@@ -118,3 +118,41 @@ print(f'{belaz.go()}, после чего {belaz.turn_right()}')
 print(geely.show_speed())
 print(ferrari.is_police)
 print(f'{belaz.name} {belaz.show_speed()}')
+
+#5 Класс Stationery
+
+class Stationery:
+    def __init__(self, title):
+        self.title = title
+
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+class Pen(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return f'Запуск отрисовки {self.title} ручкой '
+
+class Penсil(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return f'Запуск отрисовки {self.title} корандашем '
+
+class Handle(Stationery):
+
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return f'Запуск отрисовки {self.title} маркером '
+
+a = Penсil("Картины")
+b = Handle('фотографии')
+c = Pen('лица')
+print(a.draw())
+print(b.draw())
+print(c.draw())
