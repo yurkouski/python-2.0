@@ -57,7 +57,6 @@ for el in cycle(my_list):
     else:
         break
 
-
 #7 Функция yeld
 from math import factorial
 
